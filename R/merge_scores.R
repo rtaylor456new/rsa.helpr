@@ -18,6 +18,11 @@ merge_scores <- function(quarterly_data, scores_data,
                          quarterly_id = "Participant_ID",
                          scores_id = "Participant_ID") {
 
+  # add in these two copy lines to fix the data.table-specific error about
+  #    duplicate column names
+  quarterly_data  <- copy(quarterly_data)
+  scores_data <- copy(scores_data)
+
   setDT(quarterly_data)
   setDT(scores_data)
 
