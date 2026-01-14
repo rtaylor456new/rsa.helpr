@@ -1,19 +1,23 @@
 Package: rsa.helpr
-Title: What the Package Does (One Line, Title Case)
+Title: RSA-911 Data Helper for Data Cleaning and Analysis
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Ruth", "Taylor", , "ruthtgithub@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: This package provides RSA researchers with user-friendly tools to
+    clean and analyze their data.
+License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
 Depends: 
-    R (>= 2.10)
+    R (>= 4.0.0)
+Imports:
+    data.table,
+    readxl
 LazyData: true
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    shiny
 VignetteBuilder: knitr
