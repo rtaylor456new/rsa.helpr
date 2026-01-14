@@ -1,5 +1,5 @@
 ---
-title: "rsa_helpr"
+title: "rsa.helpr"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{rsa_helpr}
