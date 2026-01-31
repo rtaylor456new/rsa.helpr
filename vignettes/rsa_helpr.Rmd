@@ -60,7 +60,7 @@ and therefore contain a fraction of the participants with RSA-911 data, the size
 To achieve the standardization and simplification of data cleaning, our R package, 
 `rsa.helpr`, has been developed alongside the process of data preparation. This package provides the opportunity to not only bypass the tedious process of data cleaning, but also to create directly reproducible results.
 
-### Helper Functions
+### Data Loading Helper Function
 #### `load_data`
 This function reads in and combines RSA-911 datasets from a user-inputted 
 directory, preparing them for cleaning steps. All the user must do is identify
@@ -110,10 +110,22 @@ data <- load_data("C:\\Users\\Some Username\\Optional Box Folder\\Folder name",
 
 
 
-### Helper Functions
+### Variable Cleaning Helper Functions
 Through the process of data cleaning, small functions were created to handle specific variable
 cleaning problems. These functions serve as helper functions for repeated cleaning tasks within larger functions in `rsa.helpr`. However, all of these helper cleaning functions can be used individually, as demonstrated in the proceeding sections. Some examples of the 
 helper functions are shown below:
+
+#### `handle_mixed_date` (vector input)
+This function is applied to date variables and allows for correct date conversion in R for different date styles -- character, Excel or date formats.
+```{r handle_mixed_date}
+
+head(rsa_simulated$E7_Application_Date_911, 10)
+
+var_clean <- handle_mixed_date(rsa_simulated$E7_Application_Date_911)
+head(var_clean, 10)
+
+```
+
 
 #### `handle_nines` (vector input)
 This function is mainly applied to binary variables, with 2 levels and a missing
