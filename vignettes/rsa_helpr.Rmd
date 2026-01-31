@@ -253,7 +253,7 @@ rsa_clean <- clean_utah(rsa_simulated)
 The `aggregate` parameter of the `clean_utah` function removes duplicate rows 
 for participants per quarter. It defaults to TRUE, and when set to TRUE, we 
 retain only the most recent row per quarter across participants.
-```{r aggregate}
+```{r aggregate, warning = FALSE}
 dim(rsa_simulated)
 
 rsa_clean <- clean_utah(rsa_simulated, aggregate = TRUE)
@@ -268,7 +268,7 @@ values in various forms to 0 for appropriate variables when set to TRUE (TRUE is
 the default). In the following example, we show a binary variable which uses 9s
 to identify missing values. In our cleaning function, we would have first 
 cleaned the variable to only use 9s to represent missings, then convert to 0.
-```{r unidentified_to_0}
+```{r unidentified_to_0, warning = FALSE}
 rsa_clean <- clean_utah(rsa_simulated, unidentified_to_0 = TRUE)
 head(rsa_clean$E42_Has_Disability_911)
 
@@ -296,7 +296,7 @@ The `remove_strictly_na` parameter of the `clean_utah` function, when set to
 TRUE, removes variables that have exclusively missing values at the end of the 
 cleaning process. This parameter defaults to TRUE, as removing unhelpful 
 variables and clutter in the data are typical goals of the cleaning process.
-```{r remove_strictly_na}
+```{r remove_strictly_na, warning = FALSE}
 
 rsa_clean <- clean_utah(rsa_simulated, remove_strictly_na = FALSE)
 
@@ -434,7 +434,7 @@ function uses the same methods as described in the Data Cleaning section to summ
 This function is to be run on cleaned RSA-911 quarterly and TRT scores datasets.
 Note that this function allows the user to specify the ID variable names in each
 dataset being merged, but the defaults are `Participant_ID` for each. 
-```{r merge_scores}
+```{r merge_scores, warning = FALSE}
 rsa_clean <- clean_utah(rsa_simulated, aggregate = FALSE)
 scores_clean <- clean_scores(scores_simulated, state_filter = "Utah")
 
@@ -454,7 +454,7 @@ length(unique(metadata$Participant_ID))
 Below is an example of the process of producing fully cleaned, condensed 
 metadata using `rsa.helpr` functions:
 
-```{r example, eval = FALSE}
+```{r example, eval = FALSE, warning=FALSE}
 # Cleaning an RSA-911 datset using defaults
 rsa_clean <- clean_utah(rsa_simulated, aggregate = FALSE)
 
