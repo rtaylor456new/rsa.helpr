@@ -69,16 +69,13 @@ var_clean <- handle_splits(rsa_simulated$E395_App_Medical_911,
                            var_name = "E395_App_Medical_911")
 ```
 
-## More Information, Vignette and `shiny` App
+## More Information
+
+### Vignette
 
 For more examples and a more detailed demonstration of `rsa.helpr` in
-action, see the vignette, `rsa.helpr.Rmd`, within the repository or by
-using the following code:
-
-``` r
-# After installing the package with built vignettes:
-browseVignettes("rsa.helpr")
-```
+action, see the vignette, `rsa.helpr.Rmd`, within the repository or
+[here](https://rtaylor456new.github.io/rsa.helpr/articles/rsa_helpr.html).
 
 ### Associated `shiny` App Dashboard
 
@@ -86,8 +83,3 @@ browseVignettes("rsa.helpr")
 <https://rsa-data-dashboard.shinyapps.io/rsa_dashboard_app/>. This app
 allows for automated and coding-free data preparation and simple
 analyses.
-
-See the vignette or the app’s webpage for more information.
-
-Full vignette
-[here](https://rtaylor456new.github.io/rsa.helpr/articles/rsa_helpr.html).
