@@ -80,10 +80,14 @@ using the following code:
 browseVignettes("rsa.helpr")
 ```
 
-### Associated `shiny` App
+### Associated `shiny` App Dashboard
 
 `rsa.helpr` is the backbone of the associated `shiny` app, hosted at
 <https://rsa-data-dashboard.shinyapps.io/rsa_dashboard_app/>. This app
 allows for automated and coding-free data preparation and simple
-analyses. See the vignette, `rsa.helpr.Rmd`, or the app’s webpage for
-more information.
+analyses.
+
+See the vignette or the app’s webpage for more information.
+
+Full vignette
+[here](https://rtaylor456new.github.io/rsa.helpr/articles/rsa_helpr.html).
