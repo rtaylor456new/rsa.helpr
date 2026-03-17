@@ -602,9 +602,9 @@ clean_utah <- function(data,
       names(data)[names(data) %in% participant_col] <- "Participant_ID"
       names(data)[names(data) %in% year_col] <- "E1_Year_911"
       names(data)[names(data) %in% quarter_col] <- "E2_Quarter_911"
-      # this is causing issues if more than one date variable:
-      # names(data)[names(data) %in% app_date_col] <- "E7_Application_Date_911"
-      # replace with
+      # Using the same code structure as above caused issues if more than one
+      #   date variable:
+      # So, replace with:
       if (length(app_date_col) == 1) {
         setnames(data, app_date_col, "E7_Application_Date_911")
       } else {
